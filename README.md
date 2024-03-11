@@ -141,6 +141,6 @@ De `cImg` library gebruikt onder water `ffmpeg`, om de animatie als videobestand
    
    - Onderbouw dit met timing-data waarbij je een verschillend aantal nodes / OpenMP threads gebruikt voor het renderen van dezelfde animatie.
 
-5- Laat met behulp van afbeeldingen in het verslag het resultaat van je code zien.
+5. Laat met behulp van afbeeldingen in het verslag het resultaat van je code zien.
 
 6. **Extra:** In de opdrachtbeschrijving en template code gaan we uit van een specifieke Julia set, gebaseerd op een vaste waarde $c$. Voel je vrij deze aan te passen, alsmede de kleuren en de scalingfunctie $(x, y) \to \mathbb{C}$. Het belangrijkste aspect is dat er in het eindresultaat een verandering over tijd is, met een roterend (= herhalend) en schalend/translerend (= niet herhalend) aspect.
