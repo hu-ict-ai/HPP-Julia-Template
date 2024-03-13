@@ -6,7 +6,6 @@
 
 class animation {
 private:
-  //std::vector<frame>* frames;
   std::unique_ptr<std::vector<frame>> frames;
   bool initialised;
 public:

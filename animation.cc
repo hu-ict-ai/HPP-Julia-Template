@@ -27,7 +27,6 @@ animation& animation::operator=(const animation& other) {
     std::copy(other.frames.get(), other.frames.get() + other.frames->size(), new_frames.get());
 
     // Deallocate existing (to be overwritten) memory.
-    //delete this->frames;
     this->frames = nullptr;
 
     // Map new memory to this.

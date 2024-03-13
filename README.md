@@ -111,7 +111,11 @@ Om controle te houden over welke `frame`-vectoren wel en niet geïnitialiseerd w
 
 Verder bevat de class de methode `initialise(unsigned int size)` om een animation alsnog te initialiseren (enkel in de root node), een `data()` methode die de animatie in een MPI-geschikt formaat aanlevert, en een `operator[]` waarmee een frame geindexeerd kan worden. Hiermee zou het niet nodig zijn met de onderliggende data te werken, behalve in de MPI collectives waar `.data()` nodig is.
 
-De `cImg` library gebruikt onder water `ffmpeg`, om de animatie als videobestand op te slaan. Deze dependency wordt via de Makefile in Linux/Mac/WSL automatisch gedownload. Voor Windows zonder WSL kun je deze handmatig downloaden ([link](https://www.gyan.dev/ffmpeg/builds/)) en de .exe van ffmpeg in de map naast je eigen gecompileerde .exe zetten. Als het niet lukt om de gegeven code aan de praat te krijgen en je geen video kan schrijven, mag je als alternatief de [`save_png()`](http://www.cimg.eu/reference/structcimg__library_1_1CImg.html#ab77d79ff964a8d2edbb9a022e347810a) methode gebruiken om losse plaatjes op te slaan. Deze moeten nog steeds in de root node verzameld worden - andere nodes schrijven zelf geen image files.
+De `cImg` library gebruikt onder water `ffmpeg`, om de animatie als videobestand op te slaan. Deze dependency wordt via de Makefile in Linux/Mac/WSL automatisch gedownload. 
+
+Voor Windows zonder WSL kun je deze handmatig downloaden ([link](https://www.gyan.dev/ffmpeg/builds/)) en de .exe van ffmpeg in de map naast je eigen gecompileerde .exe zetten. 
+
+Als het niet lukt om de gegeven code aan de praat te krijgen en je geen video kan schrijven, mag je als alternatief de [`save_png()`](http://www.cimg.eu/reference/structcimg__library_1_1CImg.html#ab77d79ff964a8d2edbb9a022e347810a) methode gebruiken om losse plaatjes op te slaan. Deze moeten nog steeds in de root node verzameld worden - andere nodes schrijven zelf geen image files.
 
 ## Opdracht
 
